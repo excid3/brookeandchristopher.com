@@ -1,14 +1,10 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="h-screen">
   <head>
     {% render "head", metadata: site.metadata, title: page.title %}
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
   </head>
-  <body class="{{ page.layout }} {{ page.page_class }}">
-    <main>
-      {{ content }}
-    </main>
-
-    {% render "footer", metadata: site.metadata %}
+  <body class="{{ page.layout }} {{ page.page_class }} h-screen">
+    {% render "navbar", metadata: site.metadata %}
+    {{ content }}
   </body>
 </html>
